@@ -1,0 +1,37 @@
+<form ng-submit="submit()">
+	<div class="row" ng-show="showMessage">
+		<h4 id="error_message" class="list-group-item list-group-item-danger">Enter valid start and end datetime</h4>
+	</div>
+	<div class="row">
+		<div>
+			Task:
+		</div>
+		<div>
+			<input type="text" ng-model="title" class="form-control" required/>
+		<div>
+	</div>
+	<br />
+	<div class="row">
+		<div>
+			Starts at:
+		</div>
+		<div>
+			<datetimepicker min-date="minDate" show-weeks="showWeeks" hour-step="hourStep" minute-step="minuteStep" ng-model="dateStart" show-meridian="showMeridian" date-format="dd-MMM-yyyy" date-options="dateOptions" date-disabled="disabled(date, mode)" readonly-time="false">
+			</datetimepicker>
+   		</div>
+	</div>
+
+	<div class="row">
+		<div>
+			Ends at:
+		</div>
+		<div>
+			<datetimepicker min-date="minDate" show-weeks="showWeeks" hour-step="hourStep" minute-step="minuteStep" ng-model="dateEnd" show-meridian="showMeridian" date-format="dd-MMM-yyyy" date-options="dateOptions" date-disabled="disabled(date, mode)" readonly-time="false">
+			</datetimepicker>
+   		</div>
+	</div>
+	
+	<div class="row">
+		<button type="submit" class="btn btn-success">Add</button>
+	</div>
+</form>

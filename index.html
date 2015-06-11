@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <title>TODO App</title>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <script src="js/libs/angular.min.js"></script>
+
+    <!-- datetimepicker includes -->
+    <script src="js/libs/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="js/datetimepicker.js"></script>
+
+    <!-- Plugin files -->
+    <!-- script src="https://cdn.rawgit.com/zhaber/datetimepicker/master/datetimepicker.js"></script -->
+    <link href="http://zhaber.github.io/datetimepicker/datetimepicker.css" type="text/css" rel="stylesheet"> 
+
+    <script src="js/libs/angular-route.min.js"></script>
+    <script src="js/libs/angular-resource.min.js"></script>
+    <script src="js/libs/angular-cookies.min.js"></script>
+    
+    <!-- local staorge dependency -->
+    <script src="js/angular-local-storage.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/services.js"></script>
+        
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <h3 style="margin-left:15px;">Your TODO List</h3>
+    </div>
+    <br>
+    <div ng-view></div>
+</div>  <!-- end container div -->
+
+</body>
+</html>

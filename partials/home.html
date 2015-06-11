@@ -1,0 +1,33 @@
+<div>
+    <button class="btn btn-primary" ng-click="addTaskButton()">Add new task</button>
+</div>
+
+<hr />
+
+<strong>
+<div class="row" style="text-align:center;">
+	<div class="col-md-1">SR NO.</div>
+	<div class="col-md-4">TASK</div>
+	<div class="col-md-2">START TIME</div>
+	<div class="col-md-2">END TIME</div>
+	<div class="col-md-2">STATUS</div>
+	<div class="col-md-1">EDIT</div>
+</div>
+</strong>
+
+<br>
+
+<div class="row" ng-repeat="task in taskData" style="padding: 5px 5px 5px 5px; text-align:center;">
+	<div class="col-md-1">{{ task.id }}</div>
+	<div class="col-md-4">{{ task.taskTitle }}</div>
+	<div class="col-md-2">{{ task.startDate | date:'MM/dd/yyyy @ h:mma' }}</div>
+	<div class="col-md-2">{{ task.endDate | date:'MM/dd/yyyy @ h:mma' }}</div>
+	<div class="col-md-2">{{ task.status }}</div>
+	<div class="col-md-1" ng-show="task.showEdit">
+		<button ng-click="showEditPage(task.id)" class="btn btn-warning" style="margin-top:-5px;">Edit</button>
+	</div>
+	<div class="col-md-1" ng-show="task.showDisabled">
+		<button ng-click="showEditPage(task.id)" class="btn btn-warning disabled" style="margin-top:-5px;">Edit</button>
+	</div>
+</div>
+
